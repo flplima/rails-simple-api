@@ -1,24 +1,34 @@
 # README
+Minha primeira experiência com Ruby on Rails.
+Feito apenas para fins de aprendizagem.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Essa API é um simples CRUD de filmes, persistindo os dados usando SQLite.
 
-Things you may want to cover:
+## Como começar
+```bash
+# clone este repositório
+git clone https://github.com/flplima/rails-simple-api.git
 
-* Ruby version
+# instale as dependências
+bundle install
 
-* System dependencies
+# execute as migrations no banco de dados
+rails db:migrate
 
-* Configuration
+# preencha o banco com alguns dados
+rails db:seed
 
-* Database creation
+# inicie o servidor de desenvolvimento
+rails server
+```
 
-* Database initialization
+A API estará funcionando em [http://localhost:3000](http://localhost:3000)
 
-* How to run the test suite
+| Rota | Função |
+| ----------- | ----------- |
+| GET /movies | Lista todos os filmes cadastrados |
+| GET /movies/1 | Mostra 1 filme pelo id |
+| POST /movies | Cadastra um novo filme |
+| PATCH/PUT /movies/1 | Altera um filme pelo id |
+| DELETE /movies/1 | Deleta um filme pelo id |
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
